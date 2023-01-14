@@ -1,0 +1,25 @@
+﻿<Window x:Class="CellularAutomataDesktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CellularAutomataDesktop"
+        mc:Ignorable="d"
+        Title="Cellular Automata" Height="450" Width="800"
+        x:Name="_this">
+    <DockPanel>
+        <StackPanel Orientation="Vertical" DockPanel.Dock="Right">
+            <Button Click="PlayPauseAnimation">Play/Pause</Button>
+            <Button Click="ToggleGame">Toggle game</Button>
+            <GroupBox Header="Cell type" x:Name="wireWorldCellType">
+                <StackPanel >
+                    <RadioButton Name="rbWire" IsChecked="True" Checked="wireWorldRadioBtnChecked">Wire</RadioButton>
+                    <RadioButton Name="rbHead" IsChecked="False" Checked="wireWorldRadioBtnChecked">Electron head</RadioButton>
+                    <RadioButton Name="rbTail" IsChecked="False" Checked="wireWorldRadioBtnChecked">Electron tail</RadioButton>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+        <Canvas x:Name="animationCanvas" Background="AliceBlue" Focusable="True" MouseLeftButtonDown="AddOrRemoveCell" />
+
+    </DockPanel>
+</Window>
