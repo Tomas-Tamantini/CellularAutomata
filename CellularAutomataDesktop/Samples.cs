@@ -1,6 +1,5 @@
 ﻿using CellularAutomataModels;
 using System.Collections.Generic;
-using System.Windows.Media.Media3D;
 
 namespace CellularAutomataDesktop
 {
