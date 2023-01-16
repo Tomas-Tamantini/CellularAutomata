@@ -99,7 +99,7 @@ namespace CellularAutomataDesktop
             }
             else
             {
-                this.automaton = Samples.DieHard();
+                this.automaton = Samples.SlowGlider();
                 wireWorldCellType.Visibility = Visibility.Collapsed;
             }
             this.DrawGame();

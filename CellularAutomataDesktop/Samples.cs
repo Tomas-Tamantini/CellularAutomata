@@ -5,12 +5,20 @@ namespace CellularAutomataDesktop
 {
     class Samples
     {
-        public static GameOfLife DieHard()
+        public static GameOfLife SlowGlider()
         {
-            HashSet<(int, int)> livePositions = new() { (31, 22), (32, 21), (32, 22), (36, 21), (37, 21), (38, 21), (37, 23) };
+            HashSet<(int, int)> livePositions = new(){
+                (41, 24), (42, 24), (45, 24), (46, 24), (43, 25), (44, 25),
+                (43, 26), (44, 26), (40, 27), (42, 27), (45, 27), (47, 27),
+                (40, 28), (47, 28), (40, 30), (47, 30), (41, 31), (42, 31),
+                (45, 31), (46, 31), (42, 32), (43, 32), (44, 32), (45, 32),
+                (43, 34), (44, 34), (43, 35), (44, 35)
+            };
+
             //Oscillator
             livePositions.UnionWith(Circuit((10, 5), (17, 7)));
             livePositions.UnionWith(Line((12, 6), 4, true));
+
 
             return new GameOfLife(livePositions);
         }
