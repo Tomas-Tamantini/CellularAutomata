@@ -8,6 +8,13 @@ namespace CellularAutomataDesktop
         public static GameOfLife DieHard()
         {
             HashSet<(int, int)> livePositions = new() { (31, 22), (32, 21), (32, 22), (36, 21), (37, 21), (38, 21), (37, 23) };
+            for (var i = 10; i < 18; i++)
+            {
+                for (var j = 5; j < 8; j++)
+                    livePositions.Add((i, j));
+            }
+            livePositions.Remove((11, 6));
+            livePositions.Remove((16, 6));
             return new GameOfLife(livePositions);
         }
 
@@ -30,7 +37,7 @@ namespace CellularAutomataDesktop
             wires.Add((24, 22));
             wires.Add((26, 22));
             wires.Remove((25, 22));
-            
+
 
             //Diode 2
             wires.Add((40, 21));
