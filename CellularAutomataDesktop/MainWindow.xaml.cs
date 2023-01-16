@@ -21,7 +21,7 @@ namespace CellularAutomataDesktop
         public MainWindow()
         {
             InitializeComponent();
-            this.automaton = Samples.Diode();
+            this.automaton = Samples.Diodes();
             this.DrawGame();
             this.dispatcherTimer = new DispatcherTimer();
             this.dispatcherTimer.Tick += new EventHandler(StepAnimation);
@@ -94,7 +94,7 @@ namespace CellularAutomataDesktop
             this.animationIsPaused = true;
             if (this.automaton is GameOfLife)
             {
-                this.automaton = Samples.Diode();
+                this.automaton = Samples.Diodes();
                 wireWorldCellType.Visibility = Visibility.Visible;
             }
             else
